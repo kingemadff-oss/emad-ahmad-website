@@ -1924,3 +1924,180 @@ footer p {
 .glow {
     position: absolute;
     width: 
+/* ================================
+   MOBILE RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .header {
+        min-height: 75px;
+        padding: 12px 20px;
+        gap: 15px;
+    }
+
+    .brand {
+        flex-shrink: 0;
+    }
+
+    .brand img {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+    }
+
+    .brand span {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .language-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+
+    /* HERO */
+    .hero {
+        min-height: auto;
+        padding: 100px 20px 80px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .eyebrow {
+        font-size: 11px;
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 14vw, 78px);
+        line-height: 0.95;
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 18px;
+        line-height: 1.8;
+        margin-top: 35px;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 35px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 18px 20px;
+    }
+
+
+    /* HERO LOGO */
+    .hero-visual {
+        width: 100%;
+        min-height: 180px;
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-logo {
+        width: 130px;
+        height: auto;
+        object-fit: contain;
+    }
+
+
+    /* SECTIONS */
+    .section {
+        padding: 90px 20px;
+    }
+
+    .section-number {
+        font-size: 12px;
+        letter-spacing: 3px;
+        margin-bottom: 25px;
+    }
+
+    .section h2 {
+        font-size: clamp(38px, 10vw, 58px);
+        line-height: 1;
+        margin-bottom: 30px;
+    }
+
+    .section > p:not(.section-number) {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+
+    /* SERVICES */
+    .services {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 40px;
+    }
+
+    .service {
+        padding: 35px 0;
+        border-bottom: 1px solid #202020;
+    }
+
+    .service h3 {
+        font-size: 24px;
+        margin: 12px 0;
+    }
+
+    .service p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+
+    /* CONTACT */
+    .contact {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .contact h2 {
+        font-size: clamp(45px, 12vw, 72px);
+        line-height: 0.95;
+    }
+
+
+    /* FOOTER */
+    footer {
+        padding: 60px 20px 40px;
+    }
+
+    footer img {
+        width: 70px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    footer p {
+        margin-top: 60px;
+        font-size: 10px;
+        letter-spacing: 3px;
+        line-height: 1.8;
+    }
+}
