@@ -132,23 +132,45 @@ servicesNumber:
 servicesTitle:
 "What I <span>Do.</span>",
 
+
 service1Title:
 "Personal Branding",
 
-service1Text:
-"Building a strong digital identity that represents who you are, what you know and what you offer.",
+service1Problem:
+"THE PROBLEM — You have knowledge, skills, or a story to share, but your digital presence doesn’t clearly reflect your value.",
+
+service1Offer:
+"WHAT I DO — I help you build a clear and consistent personal brand, from positioning and messaging to content direction and digital presence.",
+
+service1Result:
+"THE RESULT — A stronger identity, clearer message, and digital presence people can understand and remember.",
+
 
 service2Title:
 "Prompt Engineering",
 
-service2Text:
-"Designing structured prompts and AI workflows to achieve better, clearer and more useful results.",
+service2Problem:
+"THE PROBLEM — You use AI, but the results are inconsistent, generic, or far from what you actually need.",
+
+service2Offer:
+"WHAT I DO — I design custom prompts and AI workflows that help you guide AI with greater precision, clarity, and consistency.",
+
+service2Result:
+"THE RESULT — Better outputs, less trial and error, and a more professional way to work with AI.",
+
 
 service3Title:
 "AI Solutions",
 
-service3Text:
-"Turning the capabilities of AI into practical solutions for individuals, creators and businesses.",
+service3Problem:
+"THE PROBLEM — You know AI can help, but you’re not sure where to start or how to turn it into something practical.",
+
+service3Offer:
+"WHAT I DO — I transform your needs and ideas into practical AI-powered solutions and workflows built around your goals.",
+
+service3Result:
+"THE RESULT — Practical AI adoption that can save time, improve your work, and turn ideas into results.",
+
 
 serviceLink:
 "Discover",
@@ -356,23 +378,45 @@ servicesNumber:
 servicesTitle:
 'ماذا <span>أقدّم؟</span>',
 
+
 service1Title:
 "بناء العلامة الشخصية",
 
-service1Text:
-"بناء هوية رقمية قوية تعبّر عن شخصيتك، معرفتك وما تقدمه.",
+service1Problem:
+"المشكلة — لديك معرفة أو مهارات أو قصة تريد مشاركتها، لكن حضورك الرقمي لا يعكس قيمتك بوضوح.",
+
+service1Offer:
+"ما أقدمه — أساعدك على بناء علامة شخصية واضحة ومتناسقة، بدءًا من التموضع والرسالة وصولًا إلى اتجاه المحتوى والحضور الرقمي.",
+
+service1Result:
+"النتيجة — هوية أقوى، ورسالة أوضح، وحضور رقمي يستطيع الناس فهمه وتذكره.",
+
 
 service2Title:
 "هندسة الأوامر",
 
-service2Text:
-"تصميم أوامر وأنظمة عمل منظمة للحصول على نتائج أفضل وأوضح وأكثر فائدة من الذكاء الاصطناعي.",
+service2Problem:
+"المشكلة — تستخدم الذكاء الاصطناعي، لكن النتائج غير ثابتة أو عامة أو بعيدة عما تحتاجه فعليًا.",
+
+service2Offer:
+"ما أقدمه — أصمم Prompts وأنظمة عمل مخصصة تساعدك على توجيه الذكاء الاصطناعي بدقة ووضوح واتساق أكبر.",
+
+service2Result:
+"النتيجة — نتائج أفضل، وقت أقل في التجربة والخطأ، وطريقة أكثر احترافية للعمل مع الذكاء الاصطناعي.",
+
 
 service3Title:
 "حلول الذكاء الاصطناعي",
 
-service3Text:
-"تحويل إمكانات الذكاء الاصطناعي إلى حلول عملية للأفراد وصنّاع المحتوى والشركات.",
+service3Problem:
+"المشكلة — تعرف أن الذكاء الاصطناعي يمكن أن يساعدك، لكنك لا تعرف من أين تبدأ أو كيف تحوله إلى استخدام عملي.",
+
+service3Offer:
+"ما أقدمه — أحوّل احتياجاتك وأفكارك إلى حلول وسير عمل عملية مدعومة بالذكاء الاصطناعي ومبنية حول أهدافك.",
+
+service3Result:
+"النتيجة — استخدام عملي للذكاء الاصطناعي يساعد على توفير الوقت، وتحسين العمل، وتحويل الأفكار إلى نتائج.",
+
 
 serviceLink:
 "اكتشف المزيد",
@@ -658,8 +702,6 @@ menuButton.setAttribute(
 
 }
 );
-
-}
 
 
 /* =================================================
