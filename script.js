@@ -395,16 +395,24 @@ if (!content) {
 return;
 }
 
+/* HTML LANGUAGE */
+
 document.documentElement.lang =
 language;
+
+/* RTL / LTR */
 
 document.documentElement.dir =
 language === "ar"
 ? "rtl"
 : "ltr";
 
+/* PAGE TITLE */
+
 document.title =
 content.pageTitle;
+
+/* TRANSLATABLE ELEMENTS */
 
 const elements =
 document.querySelectorAll(
@@ -432,12 +440,16 @@ content[key];
 
 });
 
+/* LANGUAGE BUTTON */
+
 if (languageButton) {
 
 languageButton.textContent =
 content.languageButton;
 
 }
+
+/* SAVE */
 
 localStorage.setItem(
 "AE_language",
@@ -478,10 +490,7 @@ nextLanguage
 MOBILE MENU
 ================================================= */
 
-if (
-menuButton &&
-navigation
-) {
+if (menuButton && navigation) {
 
 menuButton.addEventListener(
 "click",
@@ -506,6 +515,8 @@ isOpen
 
 }
 );
+
+/* CLOSE MENU AFTER NAVIGATION */
 
 const navLinks =
 navigation.querySelectorAll(
@@ -536,7 +547,8 @@ menuButton.setAttribute(
 );
 
 }
-);
+
+}
 
 /* =================================================
 INITIAL LANGUAGE
