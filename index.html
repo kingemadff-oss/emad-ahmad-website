@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -11,156 +12,261 @@
 
     <meta
         name="description"
-        content="EMAD_AHMAD — Personal Branding, Prompt Engineering and AI."
+        content="EMAD_AHMAD — Personal Branding, Prompt Engineering and Artificial Intelligence."
+    >
+
+    <meta
+        name="theme-color"
+        content="#050505"
     >
 
     <title>AE | EMAD_AHMAD</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 
 <body>
 
-    <!-- =====================================
+    <!-- =================================================
          HEADER
-    ====================================== -->
+    ================================================== -->
 
-    <header class="header">
+    <header class="site-header">
 
-        <a href="#home" class="brand">
-            <img
-                src="ae-logo.jpg"
-                alt="AE Logo"
+        <div class="header-top">
+
+            <!-- BRAND -->
+            <a
+                href="#home"
+                class="brand"
+                aria-label="AE EMAD_AHMAD"
             >
 
-            <span>EMAD_AHMAD</span>
-        </a>
+                <img
+                    src="WA_1787863816680.jpeg"
+                    alt="AE Logo"
+                    class="brand-logo"
+                >
+
+                <span class="brand-name">
+                    EMAD_AHMAD
+                </span>
+
+            </a>
 
 
+            <!-- HEADER ACTIONS -->
+            <div class="header-actions">
+
+                <button
+                    id="languageToggle"
+                    class="language-btn"
+                    type="button"
+                    aria-label="Change language"
+                >
+                    العربية
+                </button>
+
+
+                <button
+                    id="menuBtn"
+                    class="menu-btn"
+                    type="button"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                    aria-controls="siteNav"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
         <nav
-            class="navigation"
-            id="navigation"
+            id="siteNav"
+            class="site-nav"
             aria-label="Main Navigation"
         >
 
-            <a href="#home">Home</a>
+            <a
+                href="#home"
+                data-i18n="navHome"
+            >
+                Home
+            </a>
 
-            <a href="#about">About</a>
+            <a
+                href="#about"
+                data-i18n="navAbout"
+            >
+                About
+            </a>
 
-            <a href="#services">Services</a>
+            <a
+                href="#services"
+                data-i18n="navServices"
+            >
+                Services
+            </a>
 
-            <a href="#work">Work</a>
+            <a
+                href="#work"
+                data-i18n="navWork"
+            >
+                Work
+            </a>
 
-            <a href="#contact">Contact</a>
+            <a
+                href="#impact"
+                data-i18n="navImpact"
+            >
+                Impact
+            </a>
+
+            <a
+                href="#contact"
+                data-i18n="navContact"
+            >
+                Contact
+            </a>
 
         </nav>
-
-
-        <div class="header-actions">
-
-            <!-- LANGUAGE BUTTON -->
-
-            <button
-                class="language-btn"
-                id="languageToggle"
-                type="button"
-                aria-label="Change language"
-            >
-                العربية
-            </button>
-
-
-            <!-- MOBILE MENU BUTTON -->
-
-            <button
-                class="menu-btn"
-                id="menuBtn"
-                type="button"
-                aria-label="Open Menu"
-                aria-expanded="false"
-            >
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-        </div>
 
     </header>
 
 
-
-    <!-- =====================================
+    <!-- =================================================
          MAIN
-    ====================================== -->
+    ================================================== -->
 
     <main>
 
 
-        <!-- =====================================
+        <!-- =================================================
              HERO
-        ====================================== -->
+        ================================================== -->
 
         <section
             id="home"
             class="hero"
         >
 
-            <div class="hero-content">
+            <div class="hero-background-grid"></div>
 
-                <p class="eyebrow">
-                    AI • PERSONAL BRAND • PROMPT ENGINEERING
-                </p>
+            <div class="hero-glow"></div>
 
 
-                <h1>
-                    BUILD YOUR
-                    <span>PERSONAL BRAND</span>
-                    WITH AI.
-                </h1>
+            <div class="hero-inner">
 
+                <div class="hero-content">
 
-                <p class="hero-description">
-                    I help people and businesses transform ideas
-                    into powerful digital experiences using
-                    Artificial Intelligence and Prompt Engineering.
-                </p>
-
-
-                <div class="hero-buttons">
-
-                    <a
-                        href="#work"
-                        class="btn primary"
+                    <p
+                        class="eyebrow"
+                        data-i18n="heroEyebrow"
                     >
-                        Explore My Work
-                    </a>
+                        AI • PERSONAL BRAND • PROMPT ENGINEERING
+                    </p>
 
 
-                    <a
-                        href="#contact"
-                        class="btn secondary"
+                    <h1
+                        data-i18n="heroTitle"
                     >
-                        Work With Me
-                    </a>
+                        BUILD YOUR
+                        <span>PERSONAL BRAND</span>
+                        WITH AI.
+                    </h1>
+
+
+                    <p
+                        class="hero-description"
+                        data-i18n="heroDescription"
+                    >
+                        I help people and businesses transform ideas
+                        into powerful digital experiences using
+                        Artificial Intelligence and Prompt Engineering.
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="#work"
+                            class="btn btn-primary"
+                            data-i18n="heroWorkButton"
+                        >
+                            Explore My Work
+                        </a>
+
+
+                        <a
+                            href="#contact"
+                            class="btn btn-secondary"
+                            data-i18n="heroContactButton"
+                        >
+                            Work With Me
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-tags">
+
+                        <span data-i18n="tagBrand">
+                            Personal Branding
+                        </span>
+
+                        <span data-i18n="tagPrompt">
+                            Prompt Engineering
+                        </span>
+
+                        <span data-i18n="tagAI">
+                            Artificial Intelligence
+                        </span>
+
+                    </div>
 
                 </div>
 
-            </div>
 
+                <!-- VISUAL PLACEHOLDER
+                     We will replace this with your
+                     personal photo after you upload it. -->
 
-            <div class="hero-visual">
+                <div class="hero-visual">
 
-                <div class="glow"></div>
+                    <div class="visual-frame">
 
-                <img
-                    src="ae-logo.jpg"
-                    alt="AE"
-                    class="hero-logo"
-                >
+                        <div class="visual-corner corner-top"></div>
+
+                        <div class="visual-center">
+
+                            <span class="visual-label">
+                                AE
+                            </span>
+
+                            <span
+                                class="visual-subtitle"
+                                data-i18n="visualSubtitle"
+                            >
+                                HUMAN × AI
+                            </span>
+
+                        </div>
+
+                        <div class="visual-corner corner-bottom"></div>
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -168,125 +274,90 @@
 
 
 
-        <!-- =====================================
+        <!-- =================================================
              ABOUT
-        ====================================== -->
+        ================================================== -->
 
         <section
             id="about"
             class="section about-section"
         >
 
-            <p class="section-number">
-                01 — ABOUT
-            </p>
+            <div class="section-inner">
+
+                <p
+                    class="section-number"
+                    data-i18n="aboutNumber"
+                >
+                    01 — ABOUT
+                </p>
 
 
-            <h2>
-                Turning ideas into
-                <span>intelligent possibilities.</span>
-            </h2>
+                <h2
+                    data-i18n="aboutTitle"
+                >
+                    Turning ideas into
+                    <span>intelligent possibilities.</span>
+                </h2>
 
 
-            <p class="section-description">
-                EMAD_AHMAD is a personal brand focused on
-                Personal Branding, Prompt Engineering and
-                Artificial Intelligence.
-            </p>
-
-        </section>
-
-
-
-        <!-- =====================================
-             SERVICES
-        ====================================== -->
-
-        <section
-            id="services"
-            class="section services-section"
-        >
-
-            <p class="section-number">
-                02 — SERVICES
-            </p>
+                <p
+                    class="section-description"
+                    data-i18n="aboutText"
+                >
+                    EMAD_AHMAD is a personal brand focused on
+                    Personal Branding, Prompt Engineering and
+                    Artificial Intelligence.
+                </p>
 
 
-            <h2>
-                What I <span>Do.</span>
-            </h2>
+                <div class="about-points">
+
+                    <div class="about-point">
+
+                        <span>01</span>
+
+                        <h3 data-i18n="aboutPoint1Title">
+                            Think
+                        </h3>
+
+                        <p data-i18n="aboutPoint1Text">
+                            Turning ideas into clear digital direction.
+                        </p>
+
+                    </div>
 
 
-            <div class="services">
+                    <div class="about-point">
+
+                        <span>02</span>
+
+                        <h3 data-i18n="aboutPoint2Title">
+                            Engineer
+                        </h3>
+
+                        <p data-i18n="aboutPoint2Text">
+                            Designing effective AI workflows and prompts.
+                        </p>
+
+                    </div>
 
 
-                <!-- SERVICE 01 -->
+                    <div class="about-point">
 
-                <article class="service">
+                        <span>03</span>
 
-                    <span class="service-number">
-                        01
-                    </span>
+                        <h3 data-i18n="aboutPoint3Title">
+                            Build
+                        </h3>
 
+                        <p data-i18n="aboutPoint3Text">
+                            Creating practical digital experiences.
+                        </p>
 
-                    <h3>
-                        Personal Branding
-                    </h3>
+                    </div>
 
-
-                    <p>
-                        Building a strong digital identity
-                        that represents who you are.
-                    </p>
-
-                </article>
-
-
-
-                <!-- SERVICE 02 -->
-
-                <article class="service">
-
-                    <span class="service-number">
-                        02
-                    </span>
-
-
-                    <h3>
-                        Prompt Engineering
-                    </h3>
-
-
-                    <p>
-                        Designing powerful prompts that
-                        unlock the potential of AI.
-                    </p>
-
-                </article>
-
-
-
-                <!-- SERVICE 03 -->
-
-                <article class="service">
-
-                    <span class="service-number">
-                        03
-                    </span>
-
-
-                    <h3>
-                        AI Solutions
-                    </h3>
-
-
-                    <p>
-                        Turning AI capabilities into practical
-                        solutions for people and businesses.
-                    </p>
-
-                </article>
-
+                </div>
 
             </div>
 
@@ -294,61 +365,436 @@
 
 
 
-        <!-- =====================================
+        <!-- =================================================
+             SERVICES
+        ================================================== -->
+
+        <section
+            id="services"
+            class="section services-section"
+        >
+
+            <div class="section-inner">
+
+                <p
+                    class="section-number"
+                    data-i18n="servicesNumber"
+                >
+                    02 — SERVICES
+                </p>
+
+
+                <h2
+                    data-i18n="servicesTitle"
+                >
+                    What I
+                    <span>Do.</span>
+                </h2>
+
+
+                <div class="services-grid">
+
+
+                    <!-- SERVICE 01 -->
+
+                    <article class="service-card">
+
+                        <div class="service-top">
+
+                            <span class="service-number">
+                                01
+                            </span>
+
+                            <span class="service-mark">
+                                /
+                            </span>
+
+                        </div>
+
+
+                        <h3 data-i18n="service1Title">
+                            Personal Branding
+                        </h3>
+
+
+                        <p data-i18n="service1Text">
+                            Building a strong digital identity
+                            that represents who you are,
+                            what you know and what you offer.
+                        </p>
+
+
+                        <a
+                            href="#contact"
+                            class="service-link"
+                            data-i18n="serviceLink"
+                        >
+                            Discover
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- SERVICE 02 -->
+
+                    <article class="service-card">
+
+                        <div class="service-top">
+
+                            <span class="service-number">
+                                02
+                            </span>
+
+                            <span class="service-mark">
+                                /
+                            </span>
+
+                        </div>
+
+
+                        <h3 data-i18n="service2Title">
+                            Prompt Engineering
+                        </h3>
+
+
+                        <p data-i18n="service2Text">
+                            Designing structured prompts and
+                            AI workflows to achieve better,
+                            clearer and more useful results.
+                        </p>
+
+
+                        <a
+                            href="#contact"
+                            class="service-link"
+                            data-i18n="serviceLink"
+                        >
+                            Discover
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- SERVICE 03 -->
+
+                    <article class="service-card">
+
+                        <div class="service-top">
+
+                            <span class="service-number">
+                                03
+                            </span>
+
+                            <span class="service-mark">
+                                /
+                            </span>
+
+                        </div>
+
+
+                        <h3 data-i18n="service3Title">
+                            AI Solutions
+                        </h3>
+
+
+                        <p data-i18n="service3Text">
+                            Turning the capabilities of AI into
+                            practical solutions for individuals,
+                            creators and businesses.
+                        </p>
+
+
+                        <a
+                            href="#contact"
+                            class="service-link"
+                            data-i18n="serviceLink"
+                        >
+                            Discover
+                        </a>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
              WORK
-        ====================================== -->
+        ================================================== -->
 
         <section
             id="work"
             class="section work-section"
         >
 
-            <p class="section-number">
-                03 — WORK
-            </p>
+            <div class="section-inner">
+
+                <p
+                    class="section-number"
+                    data-i18n="workNumber"
+                >
+                    03 — WORK
+                </p>
 
 
-            <h2>
-                Selected <span>Work.</span>
-            </h2>
+                <h2
+                    data-i18n="workTitle"
+                >
+                    Selected
+                    <span>Work.</span>
+                </h2>
 
 
-            <p class="section-description">
-                Projects and experiments in AI,
-                Prompt Engineering and Personal Branding
-                will appear here.
-            </p>
+                <p
+                    class="section-description"
+                    data-i18n="workText"
+                >
+                    A growing collection of projects,
+                    experiments and creative work in
+                    AI, Prompt Engineering and Personal Branding.
+                </p>
+
+
+                <div class="work-grid">
+
+
+                    <article class="work-card">
+
+                        <span class="work-index">
+                            01
+                        </span>
+
+                        <div>
+
+                            <p class="work-category">
+                                AI
+                            </p>
+
+                            <h3 data-i18n="work1Title">
+                                AI Experiments
+                            </h3>
+
+                            <p
+                                data-i18n="work1Text"
+                                class="work-card-text"
+                            >
+                                Practical experiments exploring
+                                the possibilities of artificial intelligence.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="work-card">
+
+                        <span class="work-index">
+                            02
+                        </span>
+
+                        <div>
+
+                            <p class="work-category">
+                                BRAND
+                            </p>
+
+                            <h3 data-i18n="work2Title">
+                                Personal Brand Systems
+                            </h3>
+
+                            <p
+                                data-i18n="work2Text"
+                                class="work-card-text"
+                            >
+                                Visual and strategic systems designed
+                                to create a stronger personal presence.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="work-card">
+
+                        <span class="work-index">
+                            03
+                        </span>
+
+                        <div>
+
+                            <p class="work-category">
+                                PROMPTS
+                            </p>
+
+                            <h3 data-i18n="work3Title">
+                                Prompt Engineering
+                            </h3>
+
+                            <p
+                                data-i18n="work3Text"
+                                class="work-card-text"
+                            >
+                                Prompt systems created for more
+                                controlled and useful AI results.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
 
         </section>
 
 
 
-        <!-- =====================================
+        <!-- =================================================
+             IMPACT
+        ================================================== -->
+
+        <section
+            id="impact"
+            class="section impact-section"
+        >
+
+            <div class="section-inner">
+
+                <p
+                    class="section-number"
+                    data-i18n="impactNumber"
+                >
+                    04 — IMPACT
+                </p>
+
+
+                <h2
+                    data-i18n="impactTitle"
+                >
+                    Technology should create
+                    <span>value.</span>
+                </h2>
+
+
+                <p
+                    class="section-description"
+                    data-i18n="impactText"
+                >
+                    My goal is not only to use AI,
+                    but to make it more understandable,
+                    practical and useful for people and businesses.
+                </p>
+
+
+                <div class="impact-lines">
+
+                    <div class="impact-line">
+
+                        <span>01</span>
+
+                        <strong data-i18n="impact1Title">
+                            EDUCATE
+                        </strong>
+
+                        <p data-i18n="impact1Text">
+                            Make AI easier to understand and use.
+                        </p>
+
+                    </div>
+
+
+                    <div class="impact-line">
+
+                        <span>02</span>
+
+                        <strong data-i18n="impact2Title">
+                            EMPOWER
+                        </strong>
+
+                        <p data-i18n="impact2Text">
+                            Help people turn ideas into opportunities.
+                        </p>
+
+                    </div>
+
+
+                    <div class="impact-line">
+
+                        <span>03</span>
+
+                        <strong data-i18n="impact3Title">
+                            CREATE
+                        </strong>
+
+                        <p data-i18n="impact3Text">
+                            Build meaningful solutions with AI.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
              CONTACT
-        ====================================== -->
+        ================================================== -->
 
         <section
             id="contact"
             class="section contact-section"
         >
 
-            <p class="section-number">
-                04 — CONTACT
-            </p>
+            <div class="section-inner">
+
+                <p
+                    class="section-number"
+                    data-i18n="contactNumber"
+                >
+                    05 — CONTACT
+                </p>
 
 
-            <h2>
-                Let's create something
-                <span>intelligent.</span>
-            </h2>
+                <h2
+                    data-i18n="contactTitle"
+                >
+                    Let's create something
+                    <span>intelligent.</span>
+                </h2>
 
 
-            <a
-                href="mailto:your@email.com"
-                class="btn primary contact-button"
-            >
-                Get In Touch
-            </a>
+                <p
+                    class="section-description"
+                    data-i18n="contactText"
+                >
+                    Have an idea, a project or a challenge?
+                    Let's turn it into something meaningful.
+                </p>
+
+
+                <a
+                    href="mailto:your@email.com"
+                    class="btn btn-primary contact-button"
+                    data-i18n="contactButton"
+                >
+                    Get In Touch
+                </a>
+
+            </div>
 
         </section>
 
@@ -356,40 +802,45 @@
 
 
 
-    <!-- =====================================
+    <!-- =================================================
          FOOTER
-    ====================================== -->
+    ================================================== -->
 
-    <footer class="footer">
+    <footer class="site-footer">
 
-        <div class="footer-brand">
+        <div class="footer-inner">
 
-            <img
-                src="ae-logo.jpg"
-                alt="AE Logo"
+            <div class="footer-brand">
+
+                <span class="footer-mark">
+                    AE
+                </span>
+
+                <span>
+                    EMAD_AHMAD
+                </span>
+
+            </div>
+
+
+            <p
+                data-i18n="footerText"
             >
-
-            <span>
-                EMAD_AHMAD
-            </span>
+                © 2026 EMAD_AHMAD — All Rights Reserved.
+            </p>
 
         </div>
-
-
-        <p>
-            © 2026 EMAD_AHMAD — All Rights Reserved.
-        </p>
 
     </footer>
 
 
 
-    <!-- =====================================
+    <!-- =================================================
          JAVASCRIPT
-    ====================================== -->
+    ================================================== -->
 
     <script src="script.js"></script>
 
 </body>
 
-                </html>
+            </html>
