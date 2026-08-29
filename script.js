@@ -1,613 +1,559 @@
 /* =====================================================
-   AE — EMAD_AHMAD
-   LANGUAGE + MOBILE MENU
+AE — EMAD_AHMAD
+LANGUAGE + MOBILE MENU
 ===================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* =================================================
-       ELEMENTS
-    ================================================= */
+/* =================================================
+ELEMENTS
+================================================= */
 
-    const languageButton =
-        document.getElementById("languageToggle");
+const languageButton =
+document.getElementById("languageToggle");
 
-    const menuButton =
-        document.getElementById("menuBtn");
+const menuButton =
+document.getElementById("menuBtn");
 
-    const navigation =
-        document.getElementById("siteNav");
+const navigation =
+document.getElementById("siteNav");
 
+/* =================================================
+TRANSLATIONS
+================================================= */
 
-    /* =================================================
-       TRANSLATIONS
-    ================================================= */
+const translations = {
 
-    const translations = {
+en: {
 
-        en: {
+pageTitle:
+"AE | EMAD_AHMAD",
 
-            pageTitle:
-                "AE | EMAD_AHMAD",
+languageButton:
+"العربية",
 
-            languageButton:
-                "العربية",
+navHome:
+"Home",
 
-            navHome:
-                "Home",
+navAbout:
+"About",
 
-            navAbout:
-                "About",
+navServices:
+"Services",
 
-            navServices:
-                "Services",
+navWork:
+"Work",
 
-            navWork:
-                "Work",
+navImpact:
+"Impact",
 
-            navImpact:
-                "Impact",
+navContact:
+"Contact",
 
-            navContact:
-                "Contact",
+heroEyebrow:
+"AI • PERSONAL BRAND • PROMPT ENGINEERING",
 
+heroTitle:
+"BUILD YOUR <span>PERSONAL BRAND</span> WITH AI.",
 
-            heroEyebrow:
-                "AI • PERSONAL BRAND • PROMPT ENGINEERING",
+heroDescription:
+"I help people and businesses transform ideas into powerful digital experiences using Artificial Intelligence and Prompt Engineering.",
 
-            heroTitle:
-                "BUILD YOUR <span>PERSONAL BRAND</span> WITH AI.",
+heroWorkButton:
+"Explore My Work",
 
-            heroDescription:
-                "I help people and businesses transform ideas into powerful digital experiences using Artificial Intelligence and Prompt Engineering.",
+heroContactButton:
+"Work With Me",
 
-            heroWorkButton:
-                "Explore My Work",
+tagBrand:
+"Personal Branding",
 
-            heroContactButton:
-                "Work With Me",
+tagPrompt:
+"Prompt Engineering",
 
-            tagBrand:
-                "Personal Branding",
+tagAI:
+"Artificial Intelligence",
 
-            tagPrompt:
-                "Prompt Engineering",
+visualSubtitle:
+"HUMAN × AI",
 
-            tagAI:
-                "Artificial Intelligence",
+aboutNumber:
+"01 — ABOUT",
 
-            visualSubtitle:
-                "HUMAN × AI",
+aboutTitle:
+"Turning ideas into <span>intelligent possibilities.</span>",
 
+aboutText:
+"I help individuals and businesses build meaningful digital identities and unlock the potential of Artificial Intelligence. Through Personal Branding and Prompt Engineering, I transform ideas into clear strategies, powerful content and intelligent digital experiences.",
 
-            aboutNumber:
-                "01 — ABOUT",
+aboutPoint1Title:
+"Think",
 
-            aboutTitle:
-                "Turning ideas into <span>intelligent possibilities.</span>",
+aboutPoint1Text:
+"I turn ideas, goals and challenges into clear digital direction and purposeful strategy.",
 
-            aboutText:
-                "EMAD_AHMAD is a personal brand focused on Personal Branding, Prompt Engineering and Artificial Intelligence.",
+aboutPoint2Title:
+"Engineer",
 
-            aboutPoint1Title:
-                "Think",
+aboutPoint2Text:
+"I design prompts, workflows and AI systems that make technology more precise, efficient and useful.",
 
-            aboutPoint1Text:
-                "Turning ideas into clear digital direction.",
+aboutPoint3Title:
+"Build",
 
-            aboutPoint2Title:
-                "Engineer",
+aboutPoint3Text:
+"I turn strategy and technology into practical digital experiences that create real value.",
 
-            aboutPoint2Text:
-                "Designing effective AI workflows and prompts.",
+servicesNumber:
+"02 — SERVICES",
 
-            aboutPoint3Title:
-                "Build",
+servicesTitle:
+"What I <span>Do.</span>",
 
-            aboutPoint3Text:
-                "Creating practical digital experiences.",
+service1Title:
+"Personal Branding",
 
+service1Text:
+"Building a strong digital identity that represents who you are, what you know and what you offer.",
 
-            servicesNumber:
-                "02 — SERVICES",
+service2Title:
+"Prompt Engineering",
 
-            servicesTitle:
-                "What I <span>Do.</span>",
+service2Text:
+"Designing structured prompts and AI workflows to achieve better, clearer and more useful results.",
 
-            service1Title:
-                "Personal Branding",
+service3Title:
+"AI Solutions",
 
-            service1Text:
-                "Building a strong digital identity that represents who you are, what you know and what you offer.",
+service3Text:
+"Turning the capabilities of AI into practical solutions for individuals, creators and businesses.",
 
-            service2Title:
-                "Prompt Engineering",
+serviceLink:
+"Discover",
 
-            service2Text:
-                "Designing structured prompts and AI workflows to achieve better, clearer and more useful results.",
+workNumber:
+"03 — WORK",
 
-            service3Title:
-                "AI Solutions",
+workTitle:
+"Selected <span>Work.</span>",
 
-            service3Text:
-                "Turning the capabilities of AI into practical solutions for individuals, creators and businesses.",
+workText:
+"A growing collection of projects, experiments and creative work in AI, Prompt Engineering and Personal Branding.",
 
-            serviceLink:
-                "Discover",
+work1Title:
+"AI Experiments",
 
+work1Text:
+"Practical experiments exploring the possibilities of artificial intelligence.",
 
-            workNumber:
-                "03 — WORK",
+work2Title:
+"Personal Brand Systems",
 
-            workTitle:
-                "Selected <span>Work.</span>",
+work2Text:
+"Visual and strategic systems designed to create a stronger personal presence.",
 
-            workText:
-                "A growing collection of projects, experiments and creative work in AI, Prompt Engineering and Personal Branding.",
+work3Title:
+"Prompt Engineering",
 
-            work1Title:
-                "AI Experiments",
+work3Text:
+"Prompt systems created for more controlled and useful AI results.",
 
-            work1Text:
-                "Practical experiments exploring the possibilities of artificial intelligence.",
+impactNumber:
+"04 — IMPACT",
 
-            work2Title:
-                "Personal Brand Systems",
+impactTitle:
+"Technology should create <span>value.</span>",
 
-            work2Text:
-                "Visual and strategic systems designed to create a stronger personal presence.",
+impactText:
+"My goal is not only to use AI, but to make it more understandable, practical and useful for people and businesses.",
 
-            work3Title:
-                "Prompt Engineering",
+impact1Title:
+"EDUCATE",
 
-            work3Text:
-                "Prompt systems created for more controlled and useful AI results.",
+impact1Text:
+"Make AI easier to understand and use.",
 
+impact2Title:
+"EMPOWER",
 
-            impactNumber:
-                "04 — IMPACT",
+impact2Text:
+"Help people turn ideas into opportunities.",
 
-            impactTitle:
-                "Technology should create <span>value.</span>",
+impact3Title:
+"CREATE",
 
-            impactText:
-                "My goal is not only to use AI, but to make it more understandable, practical and useful for people and businesses.",
+impact3Text:
+"Build meaningful solutions with AI.",
 
-            impact1Title:
-                "EDUCATE",
+contactNumber:
+"05 — CONTACT",
 
-            impact1Text:
-                "Make AI easier to understand and use.",
+contactTitle:
+"Let's create something <span>intelligent.</span>",
 
-            impact2Title:
-                "EMPOWER",
+contactText:
+"Have an idea, a project or a challenge? Let's turn it into something meaningful.",
 
-            impact2Text:
-                "Help people turn ideas into opportunities.",
+contactButton:
+"Get In Touch",
 
-            impact3Title:
-                "CREATE",
+footerText:
+"© 2026 EMAD_AHMAD — All Rights Reserved."
 
-            impact3Text:
-                "Build meaningful solutions with AI.",
+},
 
+ar: {
 
-            contactNumber:
-                "05 — CONTACT",
+pageTitle:
+"AE | EMAD_AHMAD",
 
-            contactTitle:
-                "Let's create something <span>intelligent.</span>",
+languageButton:
+"English",
 
-            contactText:
-                "Have an idea, a project or a challenge? Let's turn it into something meaningful.",
+navHome:
+"الرئيسية",
 
-            contactButton:
-                "Get In Touch",
+navAbout:
+"من أنا",
 
+navServices:
+"الخدمات",
 
-            footerText:
-                "© 2026 EMAD_AHMAD — All Rights Reserved."
+navWork:
+"أعمالي",
 
-        },
+navImpact:
+"الأثر",
 
+navContact:
+"تواصل معي",
 
-        ar: {
+heroEyebrow:
+"الذكاء الاصطناعي • العلامة الشخصية • هندسة الأوامر",
 
-            pageTitle:
-                "AE | EMAD_AHMAD",
+heroTitle:
+'ابنِ <span>علامتك الشخصية</span> باستخدام الذكاء الاصطناعي.',
 
-            languageButton:
-                "English",
+heroDescription:
+"أساعد الأفراد والشركات على تحويل الأفكار إلى تجارب رقمية قوية باستخدام الذكاء الاصطناعي وهندسة الأوامر.",
 
-            navHome:
-                "الرئيسية",
+heroWorkButton:
+"استكشف أعمالي",
 
-            navAbout:
-                "من أنا",
+heroContactButton:
+"اعمل معي",
 
-            navServices:
-                "الخدمات",
+tagBrand:
+"بناء العلامة الشخصية",
 
-            navWork:
-                "أعمالي",
+tagPrompt:
+"هندسة الأوامر",
 
-            navImpact:
-                "الأثر",
+tagAI:
+"الذكاء الاصطناعي",
 
-            navContact:
-                "تواصل معي",
+visualSubtitle:
+"الإنسان × الذكاء الاصطناعي",
 
+aboutNumber:
+"01 — من أنا",
 
-            heroEyebrow:
-                "الذكاء الاصطناعي • العلامة الشخصية • هندسة الأوامر",
+aboutTitle:
+'نحوّل الأفكار إلى <span>إمكانات ذكية.</span>',
 
-            heroTitle:
-                'ابنِ <span>علامتك الشخصية</span> باستخدام الذكاء الاصطناعي.',
+aboutText:
+"أساعد الأفراد والشركات على بناء هويات رقمية مؤثرة واستثمار إمكانات الذكاء الاصطناعي. من خلال بناء العلامة الشخصية وهندسة الأوامر، أحوّل الأفكار إلى استراتيجيات واضحة ومحتوى مؤثر وتجارب رقمية ذكية.",
 
-            heroDescription:
-                "أساعد الأفراد والشركات على تحويل الأفكار إلى تجارب رقمية قوية باستخدام الذكاء الاصطناعي وهندسة الأوامر.",
+aboutPoint1Title:
+"نفكّر",
 
-            heroWorkButton:
-                "استكشف أعمالي",
+aboutPoint1Text:
+"أحوّل الأفكار والأهداف والتحديات إلى اتجاه رقمي واضح واستراتيجية هادفة.",
 
-            heroContactButton:
-                "اعمل معي",
+aboutPoint2Title:
+"نهندس",
 
-            tagBrand:
-                "بناء العلامة الشخصية",
+aboutPoint2Text:
+"أصمم الأوامر وأنظمة العمل وحلول الذكاء الاصطناعي لتكون أكثر دقة وكفاءة وفائدة.",
 
-            tagPrompt:
-                "هندسة الأوامر",
+aboutPoint3Title:
+"نبني",
 
-            tagAI:
-                "الذكاء الاصطناعي",
+aboutPoint3Text:
+"أحوّل الاستراتيجية والتقنية إلى تجارب رقمية عملية تصنع قيمة حقيقية.",
 
-            visualSubtitle:
-                "الإنسان × الذكاء الاصطناعي",
+servicesNumber:
+"02 — الخدمات",
 
+servicesTitle:
+'ماذا <span>أقدّم؟</span>',
 
-            aboutNumber:
-                "01 — من أنا",
+service1Title:
+"بناء العلامة الشخصية",
 
-            aboutTitle:
-                'نحوّل الأفكار إلى <span>إمكانات ذكية.</span>',
+service1Text:
+"بناء هوية رقمية قوية تعبّر عن شخصيتك، معرفتك وما تقدمه.",
 
-            aboutText:
-                "EMAD_AHMAD هي علامة شخصية تركز على بناء العلامة الشخصية، وهندسة الأوامر والذكاء الاصطناعي.",
+service2Title:
+"هندسة الأوامر",
 
-            aboutPoint1Title:
-                "نفكّر",
+service2Text:
+"تصميم أوامر وأنظمة عمل منظمة للحصول على نتائج أفضل وأوضح وأكثر فائدة من الذكاء الاصطناعي.",
 
-            aboutPoint1Text:
-                "تحويل الأفكار إلى اتجاه رقمي واضح.",
+service3Title:
+"حلول الذكاء الاصطناعي",
 
-            aboutPoint2Title:
-                "نهندس",
+service3Text:
+"تحويل إمكانات الذكاء الاصطناعي إلى حلول عملية للأفراد وصنّاع المحتوى والشركات.",
 
-            aboutPoint2Text:
-                "تصميم أوامر وأنظمة عمل فعّالة للذكاء الاصطناعي.",
+serviceLink:
+"اكتشف المزيد",
 
-            aboutPoint3Title:
-                "نبني",
+workNumber:
+"03 — أعمالي",
 
-            aboutPoint3Text:
-                "إنشاء تجارب رقمية عملية وذات قيمة.",
+workTitle:
+'نماذج من <span>أعمالي.</span>',
 
+workText:
+"مجموعة متنامية من المشاريع والتجارب والأعمال الإبداعية في الذكاء الاصطناعي وهندسة الأوامر وبناء العلامة الشخصية.",
 
-            servicesNumber:
-                "02 — الخدمات",
+work1Title:
+"تجارب الذكاء الاصطناعي",
 
-            servicesTitle:
-                'ماذا <span>أقدّم؟</span>',
+work1Text:
+"تجارب عملية لاستكشاف إمكانات الذكاء الاصطناعي.",
 
-            service1Title:
-                "بناء العلامة الشخصية",
+work2Title:
+"أنظمة العلامة الشخصية",
 
-            service1Text:
-                "بناء هوية رقمية قوية تعبّر عن شخصيتك، معرفتك وما تقدمه.",
+work2Text:
+"أنظمة بصرية واستراتيجية تساعد على بناء حضور شخصي أقوى.",
 
-            service2Title:
-                "هندسة الأوامر",
+work3Title:
+"هندسة الأوامر",
 
-            service2Text:
-                "تصميم أوامر وأنظمة عمل منظمة للحصول على نتائج أفضل وأوضح وأكثر فائدة من الذكاء الاصطناعي.",
+work3Text:
+"أنظمة Prompts مصممة للحصول على نتائج أكثر دقة وفائدة.",
 
-            service3Title:
-                "حلول الذكاء الاصطناعي",
+impactNumber:
+"04 — الأثر",
 
-            service3Text:
-                "تحويل إمكانات الذكاء الاصطناعي إلى حلول عملية للأفراد وصنّاع المحتوى والشركات.",
+impactTitle:
+'يجب أن تصنع التقنية <span>قيمة.</span>',
 
-            serviceLink:
-                "اكتشف المزيد",
+impactText:
+"هدفي ليس فقط استخدام الذكاء الاصطناعي، بل جعله أكثر وضوحًا وعملية وفائدة للأفراد والشركات.",
 
+impact1Title:
+"التثقيف",
 
-            workNumber:
-                "03 — أعمالي",
+impact1Text:
+"جعل الذكاء الاصطناعي أسهل للفهم والاستخدام.",
 
-            workTitle:
-                'نماذج من <span>أعمالي.</span>',
+impact2Title:
+"التمكين",
 
-            workText:
-                "مجموعة متنامية من المشاريع والتجارب والأعمال الإبداعية في الذكاء الاصطناعي وهندسة الأوامر وبناء العلامة الشخصية.",
+impact2Text:
+"مساعدة الناس على تحويل أفكارهم إلى فرص.",
 
-            work1Title:
-                "تجارب الذكاء الاصطناعي",
+impact3Title:
+"الابتكار",
 
-            work1Text:
-                "تجارب عملية لاستكشاف إمكانات الذكاء الاصطناعي.",
+impact3Text:
+"بناء حلول ذات معنى باستخدام الذكاء الاصطناعي.",
 
-            work2Title:
-                "أنظمة العلامة الشخصية",
+contactNumber:
+"05 — تواصل معي",
 
-            work2Text:
-                "أنظمة بصرية واستراتيجية تساعد على بناء حضور شخصي أقوى.",
+contactTitle:
+'لنصنع شيئًا <span>ذكيًا.</span>',
 
-            work3Title:
-                "هندسة الأوامر",
+contactText:
+"لديك فكرة أو مشروع أو تحدٍّ؟ لنحوّله معًا إلى شيء ذي قيمة.",
 
-            work3Text:
-                "أنظمة Prompts مصممة للحصول على نتائج أكثر دقة وفائدة.",
+contactButton:
+"تواصل معي",
 
+footerText:
+"© 2026 EMAD_AHMAD — جميع الحقوق محفوظة."
 
-            impactNumber:
-                "04 — الأثر",
+}
 
-            impactTitle:
-                'يجب أن تصنع التقنية <span>قيمة.</span>',
+};
 
-            impactText:
-                "هدفي ليس فقط استخدام الذكاء الاصطناعي، بل جعله أكثر وضوحًا وعملية وفائدة للأفراد والشركات.",
+/* =================================================
+APPLY LANGUAGE
+================================================= */
 
-            impact1Title:
-                "التثقيف",
+function applyLanguage(language) {
 
-            impact1Text:
-                "جعل الذكاء الاصطناعي أسهل للفهم والاستخدام.",
+const content =
+translations[language];
 
-            impact2Title:
-                "التمكين",
+if (!content) {
+return;
+}
 
-            impact2Text:
-                "مساعدة الناس على تحويل أفكارهم إلى فرص.",
+document.documentElement.lang =
+language;
 
-            impact3Title:
-                "الابتكار",
+document.documentElement.dir =
+language === "ar"
+? "rtl"
+: "ltr";
 
-            impact3Text:
-                "بناء حلول ذات معنى باستخدام الذكاء الاصطناعي.",
+document.title =
+content.pageTitle;
 
+const elements =
+document.querySelectorAll(
+"[data-i18n]"
+);
 
-            contactNumber:
-                "05 — تواصل معي",
+elements.forEach(function (element) {
 
-            contactTitle:
-                'لنصنع شيئًا <span>ذكيًا.</span>',
+const key =
+element.getAttribute(
+"data-i18n"
+);
 
-            contactText:
-                "لديك فكرة أو مشروع أو تحدٍّ؟ لنحوّله معًا إلى شيء ذي قيمة.",
+if (
+Object.prototype.hasOwnProperty.call(
+content,
+key
+)
+) {
 
-            contactButton:
-                "تواصل معي",
+element.innerHTML =
+content[key];
 
+}
 
-            footerText:
-                "© 2026 EMAD_AHMAD — جميع الحقوق محفوظة."
+});
 
-        }
+if (languageButton) {
 
-    };
+languageButton.textContent =
+content.languageButton;
 
+}
 
-    /* =================================================
-       APPLY LANGUAGE
-    ================================================= */
+localStorage.setItem(
+"AE_language",
+language
+);
 
-    function applyLanguage(language) {
+}
 
-        const content =
-            translations[language];
+/* =================================================
+LANGUAGE BUTTON
+================================================= */
 
-        if (!content) {
-            return;
-        }
+if (languageButton) {
 
+languageButton.addEventListener(
+"click",
+function () {
 
-        /* HTML LANGUAGE */
+const currentLanguage =
+document.documentElement.lang ||
+"en";
 
-        document.documentElement.lang =
-            language;
+const nextLanguage =
+currentLanguage === "en"
+? "ar"
+: "en";
 
+applyLanguage(
+nextLanguage
+);
 
-        /* RTL / LTR */
+}
+);
 
-        document.documentElement.dir =
-            language === "ar"
-                ? "rtl"
-                : "ltr";
+}
 
+/* =================================================
+MOBILE MENU
+================================================= */
 
-        /* PAGE TITLE */
+if (
+menuButton &&
+navigation
+) {
 
-        document.title =
-            content.pageTitle;
+menuButton.addEventListener(
+"click",
+function () {
 
+const isOpen =
+navigation.classList.toggle(
+"active"
+);
 
-        /* TRANSLATABLE ELEMENTS */
+menuButton.classList.toggle(
+"active",
+isOpen
+);
 
-        const elements =
-            document.querySelectorAll(
-                "[data-i18n]"
-            );
+menuButton.setAttribute(
+"aria-expanded",
+isOpen
+? "true"
+: "false"
+);
 
+}
+);
 
-        elements.forEach(function (element) {
+const navLinks =
+navigation.querySelectorAll(
+"a"
+);
 
-            const key =
-                element.getAttribute(
-                    "data-i18n"
-                );
+navLinks.forEach(
+function (link) {
 
+link.addEventListener(
+"click",
+function () {
 
-            if (
-                Object.prototype.hasOwnProperty.call(
-                    content,
-                    key
-                )
-            ) {
+navigation.classList.remove(
+"active"
+);
 
-                element.innerHTML =
-                    content[key];
+menuButton.classList.remove(
+"active"
+);
 
-            }
+menuButton.setAttribute(
+"aria-expanded",
+"false"
+);
 
-        });
+}
+);
 
+}
+);
 
-        /* LANGUAGE BUTTON */
+/* =================================================
+INITIAL LANGUAGE
+================================================= */
 
-        if (languageButton) {
+const savedLanguage =
+localStorage.getItem(
+"AE_language"
+);
 
-            languageButton.textContent =
-                content.languageButton;
+const initialLanguage =
+savedLanguage === "ar"
+? "ar"
+: "en";
 
-        }
-
-
-        /* SAVE */
-
-        localStorage.setItem(
-            "AE_language",
-            language
-        );
-
-    }
-
-
-    /* =================================================
-       LANGUAGE BUTTON
-    ================================================= */
-
-    if (languageButton) {
-
-        languageButton.addEventListener(
-            "click",
-            function () {
-
-                const currentLanguage =
-                    document.documentElement.lang ||
-                    "en";
-
-
-                const nextLanguage =
-                    currentLanguage === "en"
-                        ? "ar"
-                        : "en";
-
-
-                applyLanguage(
-                    nextLanguage
-                );
-
-            }
-        );
-
-    }
-
-
-    /* =================================================
-       MOBILE MENU
-    ================================================= */
-
-    if (
-        menuButton &&
-        navigation
-    ) {
-
-        menuButton.addEventListener(
-            "click",
-            function () {
-
-                const isOpen =
-                    navigation.classList.toggle(
-                        "active"
-                    );
-
-
-                menuButton.classList.toggle(
-                    "active",
-                    isOpen
-                );
-
-
-                menuButton.setAttribute(
-                    "aria-expanded",
-                    isOpen
-                        ? "true"
-                        : "false"
-                );
-
-            }
-        );
-
-
-        /* CLOSE AFTER NAVIGATION */
-
-        const navLinks =
-            navigation.querySelectorAll(
-                "a"
-            );
-
-
-        navLinks.forEach(
-            function (link) {
-
-                link.addEventListener(
-                    "click",
-                    function () {
-
-                        navigation.classList.remove(
-                            "active"
-                        );
-
-
-                        menuButton.classList.remove(
-                            "active"
-                        );
-
-
-                        menuButton.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-                    }
-                );
-
-            }
-        );
-
-    }
-
-
-    /* =================================================
-       INITIAL LANGUAGE
-    ================================================= */
-
-    const savedLanguage =
-        localStorage.getItem(
-            "AE_language"
-        );
-
-
-    const initialLanguage =
-        savedLanguage === "ar"
-            ? "ar"
-            : "en";
-
-
-    applyLanguage(
-        initialLanguage
-    );
+applyLanguage(
+initialLanguage
+);
 
 });
